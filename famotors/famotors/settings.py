@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fasite',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

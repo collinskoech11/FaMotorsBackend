@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from fasite import views
+from django.contrib.auth import views as auth_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,8 @@ urlpatterns = [
     path('Recovery.html', views.Contact, name='Recovery'),
     path('Service.html', views.Contact, name='Service'),
     path('Team.html', views.Contact, name='Team'),
+    path('register.html', views.register, name='register'),
+    path('login.html',auth_view.LoginView.as_view(template_name='SignIn.html')),
+    path('logout.html', auth_view.LogoutView.as_view(template_name='logout.html')),
 ]
+
