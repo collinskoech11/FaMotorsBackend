@@ -34,10 +34,18 @@
             text-align:center;
             border: 2px solid rgb(255,0,0,0.5);
         }
+        .form-container button{
+            width:300px;
+            background-color:red;
+            color:#fff;
+            margin:auto;
+            height:50px;
+            border:none;
+        }
         @media screen and (max-width:1200px){
-            .forb-container{
+            .form-container{
                 width:100%;
-                padding:100px;
+                padding:20px;
             }
         }
 
@@ -88,9 +96,13 @@
     </section>
     <section class="FormCon">
         <div class="form-container">
-            <input type="text" placeholder="Your name here :" name="name" id="name">
-            <input type="text" placeholder="Your email" name="email" id="email">
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Your name here :" name="name" id="name">
+                <input type="text" placeholder="Your email" name="email" id="email">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here :"></textarea>
+                <button type="submit">Sumbit</button>
+            </form>
         </div>
     </section>
     <secttion class="FooterContainer">

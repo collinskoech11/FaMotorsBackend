@@ -3,12 +3,20 @@ from django.contrib.auth.forms import UserCreationForm
 from . forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Contact
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
 def Contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name',"")
+        email = request.POST.get('email',"")
+        message = request.POST.get('message',"")
+
+        contact = Contact(name=name, email=email, message=message)
+        contact.save()
     return render(request, 'Contact.html')
 
 def login(request):
