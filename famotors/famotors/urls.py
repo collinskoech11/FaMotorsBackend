@@ -27,7 +27,7 @@ urlpatterns = [
     path('Service.html', views.Contact, name='Service'),
     path('Team.html', views.Contact, name='Team'),
     path('register.html', views.register, name='register'),
-    path('login.html',auth_view.LoginView.as_view(template_name='SignIn.html')),
+    path('login.html',auth_view.LoginView.as_view(template_name='login.html')),
     path('logout.html', auth_view.LogoutView.as_view(template_name='logout.html')),
 ]
 
