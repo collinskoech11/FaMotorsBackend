@@ -12,6 +12,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+    <style>
+        .team-container{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-wrap:wrap;
+            padding:100px;
+        }
+        .team-container .team-person{
+            width:23%;
+            height:500px;
+            border:1px solid red;
+            display:block;
+            margin-right:2%;
+            border-radius:10px;
+        }
+        @media screen and (max-width:1200px){
+            .team-container .team-person{
+                width:47%;
+            }
+        }
+        @media screen and (max-width:800px){
+            .team-container .team-person{
+                width:97%;
+            }
+        }
+        .team-container .team-person .profile-pic{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            overflow:hidden;
+            margin:auto;
+            margin-top:10px;
+
+        }
+        .team-container .team-person .profile-pic img{
+            width:100%;
+            height:100%;
+        }
+        .team-container .team-person .profile-body{
+            padding:20px;
+            text-align:center;
+            line-height: 30px;
+
+        }
+        .team-container .team-person .profile-body h3{
+            padding-bottom:20px;
+            color:rgb(0, 255, 0)
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -54,6 +104,50 @@
             <a href="Gallery.html"><button>Gallery</button> </a>
             <a href="Recovery.html"><button>UNIQ Recovery</button> </a>
             <a href="Contact.html"><button>Contact Us</button></a> 
+        </div>
+    </section>
+    <section class="Team">
+        <div class="team-container">
+            <div class="team-person">
+                <div class="profile-pic">
+                    <img src="https://source.unsplash.com/500x500/?person"/>
+                </div>
+                <div class="profile-body">
+                    <h3>Profile Name</h3>
+                    <h3>Company Position</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque hic odio doloribus accusantium voluptas distinctio unde molestias. Rem tempora iure dolores natus tenetur cupiditate totam consectetur blanditiis sed, quae similique!</p>
+                </div>
+            </div>
+            <div class="team-person">
+                <div class="profile-pic">
+                    <img src="https://source.unsplash.com/500x500/?person"/>
+                </div>
+                <div class="profile-body">
+                    <h3>Profile Name</h3>
+                    <h3>Company Position</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque hic odio doloribus accusantium voluptas distinctio unde molestias. Rem tempora iure dolores natus tenetur cupiditate totam consectetur blanditiis sed, quae similique!</p>
+                </div>               
+            </div>
+            <div class="team-person">
+                <div class="profile-pic">
+                    <img src="https://source.unsplash.com/500x500/?person"/>
+                </div>
+                <div class="profile-body">
+                    <h3>Profile Name</h3>
+                    <h3>Company Position</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque hic odio doloribus accusantium voluptas distinctio unde molestias. Rem tempora iure dolores natus tenetur cupiditate totam consectetur blanditiis sed, quae similique!</p>
+                </div>               
+            </div>
+            <div class="team-person">
+                <div class="profile-pic">
+                    <img src="https://source.unsplash.com/500x500/?person"/>
+                </div>
+                <div class="profile-body">
+                    <h3>Profile Name</h3>
+                    <h3>Company Position</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque hic odio doloribus accusantium voluptas distinctio unde molestias. Rem tempora iure dolores natus tenetur cupiditate totam consectetur blanditiis sed, quae similique!</p>
+                </div>                
+            </div>
         </div>
     </section>
     <secttion class="FooterContainer">
