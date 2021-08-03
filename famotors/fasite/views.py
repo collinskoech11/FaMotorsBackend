@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from . forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Contact
+from .models import ContactForm
 
 # Create your views here.
 def index(request):
@@ -11,12 +11,14 @@ def index(request):
 
 def Contact(request):
     if request.method == 'POST':
-        name = request.POST.get('name',"")
+        brand = request.POST.get('brand',"")
         email = request.POST.get('email',"")
         message = request.POST.get('message',"")
 
-        contact = Contact(name=name, email=email, message=message)
-        contact.save()
+        contactForm = ContactForm(brand=brand, email=email, message=message)
+        contactForm.save()
+
+        
     return render(request, 'Contact.html')
 
 def login(request):
