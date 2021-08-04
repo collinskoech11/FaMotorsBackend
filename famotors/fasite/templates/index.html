@@ -34,7 +34,11 @@
                     <h5>Operational Hours</h5>
                     <p>Mon-Fri 9am-5pm</p>
                     <p>Sat 9am - 12pm</p>
-                    <button style="width:150px;height:50px;border:none;background-color: red;color:#fff;">Sign in</button>
+                    {% if user.is_authenticated %}
+                    <button style="width:150px;height:50px;border:none;background-color: red;color:#fff;font-weight: bold;text-transform: uppercase;">{{user.username}}</button>
+                    {% else %}
+                    <a href="/login.html"><button style="width:150px;height:50px;border:none;background-color: red;color:#fff;font-weight: bold;cursor:pointer;">Sign in </button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -81,14 +85,15 @@
             <img src="{% static './logos/ford.png' %}">
             <img src="{% static './logos/honda.png' %}">
             <img src="{% static './logos/mercedes.png' %}">
+            <img src="{% static './logos/izuzu.png' %}"
         </div>
     </section>
     <section class="carProfileContainer">
         <div class="image-grid">
-            <h1>Car Servicing offers</h1>
+            <h1>Insurance Companies We Work With</h1>
           
             <div class="grid-left">
-              <img class="logo-images" src="https://source.unsplash.com/200x150/?Mercedes" />
+              <img class="logo-images" src="{% static './img/britam.png' % }" />
               <span class="image-description">
                 <strong>Mercedes</strong><br>
                 Full Service<br>
