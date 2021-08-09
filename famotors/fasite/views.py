@@ -51,3 +51,12 @@ def Service(request):
 
 def Team(request):
     return render(request, 'Team.html')
+
+def Qotation(request):
+    return render(request, 'quotation.html')
+
+def Excess(request):
+    return render(request, 'excess.html')
+
+def Warranty(request):
+    return render(request, 'warranty.html')

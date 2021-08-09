@@ -27,6 +27,9 @@ urlpatterns = [
     path('Service.html', views.Service, name='Service'),
     path('Team.html', views.Team, name='Team'),
     path('register.html', views.register, name='register'),
+    path('Quotation.html', views.Quotation, name='Quotation'),
+    path('Warranty.html', views.Warranty, name='Warranty'),
+    path('Excess.html', views.Excess, name='Excess'),
     path('login.html',auth_view.LoginView.as_view(template_name='login.html')),
     path('logout.html', auth_view.LogoutView.as_view(template_name='logout.html')),
 ]
