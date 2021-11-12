@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from . forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import ContactForm
+from .models import ContactForm, ToaForm
 
 # Create your views here.
 def index(request):
